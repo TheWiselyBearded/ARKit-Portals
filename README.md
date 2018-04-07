@@ -1,4 +1,4 @@
-#ARKit Monoscopic Portals
+ARKit Monoscopic Portals
 Using Unity 2017.3 and ARKit 1.0.14
 
 
