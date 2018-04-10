@@ -37,7 +37,7 @@ Tutorial series by Pirates Just AR. This tutorial series explains how to utilize
 All custom files, scripts, media content, and scene files are stored in the **Resources** Folder. Images are stored in ***Resources/360Images/.***
 
 When adding images to the project, simply drag/drop the file into the 360Images folder using File Explorer/Finder.
-###### **MAKE SURE TO PROPERLY CONFIGURE IMAGE SETTINGS.** 
+### **MAKE SURE TO PROPERLY CONFIGURE IMAGE SETTINGS.** 
 
 View the imported image in the editor inspector, and change the texture shape from **2D** to **cubemap.**
 
@@ -61,16 +61,16 @@ View the imported image in the editor inspector, and change the texture shape fr
 
 Once adding Portal prefab to scene, click on the **Portal Transporter** child object. 
 This plane is responsible for detecting collisions with user camera, and assigning skybox Portal.
-You must specify the image to use from the 360 images folder, by default it’s using the Bladerunner 360 image. 
+You must specify the image to use from the 360 images folder, by default it’s using the Bladerunner 360 image.
 Simply drag/drop the image into the **Image Skybox** field for the **Portal Transporter** object.
 ---
 ---
 
 
 
-## How it works:
+# How it works:
 
-### Scripts:
+## Scripts:
 
 #### *IdentifyPortal.cs*
 ---
@@ -86,17 +86,17 @@ The script takes the assigned image, and creates a skybox material out of it. It
 
 ---
 
-### Shaders:
-#### *SkyboxCube/Skybox*
+## Shaders:
+### *SkyboxCube/Skybox*
 ---
 This shader contains a enumerate stencil that toggles between ***‘Equal’*** and ***‘Not Equal’***. 
 ***‘Equal’*** denotes a state in which the user is within a Portal Reality, and the Portal Window should render the camera feed.
 ***‘Not Equal’*** denotes a state in which the user is outside a Portal, and the Portal Window should render the skybox scene.
 
-###### In depth explanation given:
+##### In depth explanation given:
 https://www.youtube.com/watch?v=0eFo4ialKKQ&list=PLKIKuXdn4ZMhwJmPnYI0e7Ixv94ZFPvEP&index=6&t=342s
 
-#### *PortalWindow*
+### *PortalWindow*
 ---
 This shader is responsible for rendering the **Portal Transporter** Plane. A stencil is used for choosing which objects are rendered in users line of sight. 
 
