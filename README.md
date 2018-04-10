@@ -13,13 +13,13 @@ Using Unity 2017.3 and ARKit 1.0.14
 * ARKit uses a focus square animation (provided in ARKit Unity API) to analyze plane. 
 * When dashed lines are used, point clouds are being analyzed to create a plane. When plane is detected, the square follows the surface as an enclosed set of edges.
 
-###References:
+### References:
 * Summarized Portal Tutorial:
 https://www.youtube.com/watch?v=Z5AmqMuNi08&t=1552s
 
 * All-in-one tutorial by Matthew Halberg explaining how to create a portal environment. For the sake of this framework, creating the portal prefab object has been based off this tutorial.
 
-###Shader Tutorial and Bidirectional Portal Collision Detection:
+### Shader Tutorial and Bidirectional Portal Collision Detection:
 https://www.youtube.com/playlist?list=PLKIKuXdn4ZMhwJmPnYI0e7Ixv94ZFPvEP
 
 * Tutorial series by Pirates Just AR. This tutorial series explains how to utilize custom shader scripts to mask off the real world and augmented portal world. The shaders are applied to the skybox, and the portal quad plane. The shader is explained in one of the scripts referenced below. Additionally, collision detection for creating bidirectional rendering of the portal is explained in this tutorial series.
@@ -37,22 +37,22 @@ All custom files, scripts, media content, and scene files are stored in the Reso
 When adding images to the project, simply drag/drop the file into the 360Images folder using File Explorer/Finder.
 ### MAKE SURE TO PROPERLY CONFIGURE IMAGE SETTINGS. 
 View the imported image in the editor inspector, and change the texture shape from 2D to cubemap.
-![2D_Cubemap](https://i.imgur.com/CJ3QkHQ.gif)
+![2D_Cubemap](https://i.imgur.com/ZCCYVXK.gif)
 
 
 ## Adding Portal Instances to AR Scene:
 ![AddPortal](https://imgur.com/ZEzzep0.jpg)
 
-The PlaneTapScene is the horizontal-surface-instantiated AR scene. 
-The PortalScene object will contain all pertaining AR Portals. 
-For any Portal Object added, make them a child of the PortalScene object. 
-The reason is because:
-When app loads, the user must analyze surfaces for a horizontal plane AR instance.
-The user will tap to invoke the portals, this tap is what activates the AR scene; the portal objects. By default, the objects are disabled. This is to prevent them from randomly being instantiated in blank space as the user analyzes the environment for a flat surface.
-PlaneTapScene is responsible for creating a AR plane instance in the background via ARKit API. PlaneTapScene will allow PortalScene to instantiate the pertinent AR objects for the scene.
+* The PlaneTapScene is the horizontal-surface-instantiated AR scene. 
+* The PortalScene object will contain all pertaining AR Portals. 
+* For any Portal Object added, make them a child of the PortalScene object. 
+### The reason is because:
+* When app loads, the user must analyze surfaces for a horizontal plane AR instance.
+* The user will tap to invoke the portals, this tap is what activates the AR scene; the portal objects. By default, the objects are disabled. This is to prevent them from randomly being instantiated in blank space as the user analyzes the environment for a flat surface.
+* PlaneTapScene is responsible for creating a AR plane instance in the background via ARKit API. PlaneTapScene will allow PortalScene to instantiate the pertinent AR objects for the scene.
 
 ## Setting Up Portal Prefab:
-![SetUp_Portal](https://i.imgur.com/t5xTexN.gif)
+![SetUp_Portal](https://i.imgur.com/2aapOTe.gif)
 
 Once adding Portal prefab to scene, click on the Portal Transporter child object. 
 This plane is responsible for detecting collisions with user camera, and assigning skybox Portal.
@@ -77,8 +77,7 @@ InterdimensionalTransporter.cs
 This script is assigned to the Portal Transporter object, which is a child of the Portal object. It is responsible to detecting when a collision occurs between the user’s camera and the portal transporter object. Based on collision, the state of the users reality is checked. The importance of this is to allow for bidirectional portal travel. Furthermore, when a collision is invoked, the shaders are toggled from Equal to Not Equal and vic versa, hence rendering the appropriate content for the users line of sight. 
 
 The script takes the assigned image, and creates a skybox material out of it. It assigns the Custom/SkyboxCube shader to create the masked content rendering described in 2nd cited YouTube series.
-
-Shaders:
+### Shaders:
 SkyboxCube/Skybox
 
 
@@ -95,6 +94,14 @@ This shader is responsible for rendering the Portal Transporter Plane. A stencil
 In depth explanation given:
 https://www.youtube.com/watch?v=b9xUO0zHNXw&list=PLKIKuXdn4ZMhwJmPnYI0e7Ixv94ZFPvEP&index=3&t=0s
 
-## License & Copyright
+### Author
 
-Alireza Bahremand, Arizona State University
+**Alireza Bahremand**
+
+* [github/TheWiselyBearded](https://github.com/TheWiselyBearded)
+* [twitter/lirezaBahremand](https://twitter.com/lirezabahremand)
+
+### License
+
+Copyright © 2018, [Alireza Bahremand](https://github.com/TheWiselyBearded).
+Released under the [MIT license](LICENSE).
