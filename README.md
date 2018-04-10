@@ -6,6 +6,7 @@ Using Unity 2017.3 and ARKit 1.0.14
 ## Features:
 ![Features](https://i.imgur.com/vBg4qbP.gif)
 ![Features](https://i.imgur.com/WWwhXBv.gif)
+![Features](http://i.imgur.com/UdJg4Tz.gif)
 * Portals are bidirectional shaders.
 * By assigning a cubemap image to a Portal prefab, each portal will have its own unique skybox portal instance. 
 * Based on Camera gaze, the skybox is changed to provide respective portal experience.
