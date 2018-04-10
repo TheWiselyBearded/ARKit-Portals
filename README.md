@@ -15,7 +15,7 @@ Using Unity 2017.3 and ARKit 1.0.14
 
 ### References:
 * Summarized Portal Tutorial:
-[![FullPortalTutorial](https://img.youtube.com/vi/Z5AmqMuNi08&t=1552s/0.jpg)](https://www.youtube.com/watch?v=Z5AmqMuNi08&t=1552s)
+[![FullPortalTutorial](https://img.youtube.com/vi/Z5AmqMuNi08/0.jpg)](https://www.youtube.com/watch?v=Z5AmqMuNi08)
 
 * All-in-one tutorial by Matthew Halberg explaining how to create a portal environment. For the sake of this framework, creating the portal prefab object has been based off this tutorial.
 
