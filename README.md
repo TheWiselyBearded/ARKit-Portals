@@ -1,5 +1,5 @@
 # ARKit Monoscopic Portals
-Using Unity 2017.3 and ARKit 1.0.14
+###### *Using Unity 2017.3 and ARKit 1.0.14*
 
 ---
 
@@ -15,15 +15,13 @@ Using Unity 2017.3 and ARKit 1.0.14
 ---
 
 ### References:
-###### Summarized Portal Tutorial:
-[![FullPortalTutorial]
-(https://img.youtube.com/vi/Z5AmqMuNi08/0.jpg)](https://www.youtube.com/watch?v=Z5AmqMuNi08)
+#### Summarized Portal Tutorial:
+[![FullPortalTutorial](https://img.youtube.com/vi/Z5AmqMuNi08/0.jpg)](https://www.youtube.com/watch?v=Z5AmqMuNi08)
 
 All-in-one tutorial by Matthew Halberg explaining how to create a portal environment. For the sake of this framework, creating the portal prefab object has been based off this tutorial.
 
-###### Shader Tutorial and Bidirectional Portal Collision Detection:
-[![ShaderTutorial]
-(https://img.youtube.com/vi/-9Fcoo1mVuo/0.jpg)](https://www.youtube.com/watch?v=-9Fcoo1mVuo)
+#### Shader Tutorial and Bidirectional Portal Collision Detection:
+[![ShaderTutorial](https://img.youtube.com/vi/-9Fcoo1mVuo/0.jpg)](https://www.youtube.com/watch?v=-9Fcoo1mVuo)
 
 Tutorial series by Pirates Just AR. This tutorial series explains how to utilize custom shader scripts to mask off the real world and augmented portal world. The shaders are applied to the skybox, and the portal quad plane. The shader is explained in one of the scripts referenced below. Additionally, collision detection for creating bidirectional rendering of the portal is explained in this tutorial series.
 
@@ -36,11 +34,13 @@ Tutorial series by Pirates Just AR. This tutorial series explains how to utilize
 ### *WHEN IMPORTING PACKAGE, MAKE SURE iOS BUILD PLATFORM IS SET.*
 
 ## Adding 360 Images to Project:
-All custom files, scripts, media content, and scene files are stored in the Resources Folder. Images are stored in *Resources/360Images/.*
+All custom files, scripts, media content, and scene files are stored in the **Resources** Folder. Images are stored in ***Resources/360Images/.***
 
 When adding images to the project, simply drag/drop the file into the 360Images folder using File Explorer/Finder.
 ###### **MAKE SURE TO PROPERLY CONFIGURE IMAGE SETTINGS.** 
+
 View the imported image in the editor inspector, and change the texture shape from **2D** to **cubemap.**
+
 ![2D_Cubemap](https://i.imgur.com/ZCCYVXK.gif)
 ---
 
@@ -72,13 +72,13 @@ Simply drag/drop the image into the **Image Skybox** field for the **Portal Tran
 
 ### Scripts:
 
-###### *IdentifyPortal.cs*
+#### *IdentifyPortal.cs*
 ---
 This script is assigned to the **Main Camera** object. It is responsible for identifying which portal the user is staring at. Should it be the case there are multiple portals in a scene, each one needs to properly assign the skybox rendering. There can only be one skybox in a scene, but it can be dynamically changed. Therefore, based on the portal the user is gazing at, the skybox is set to correspond to the portal being explored.
 
 This is done by shooting a raycast out from the camera. So imagine an invisible straight line shooting from the center of the camera, when it hits a collision with another game object, it checks if the collided-with object is tagged as a *‘Portal’*, if it is it references that portal to assign the skybox to the scene.
 
-###### *InterdimensionalTransporter.cs*
+#### *InterdimensionalTransporter.cs*
 ---
 This script is assigned to the **Portal Transporter** object, which is a child of the **Portal** object. It is responsible to detecting when a collision occurs between the user’s camera and the portal transporter object. Based on collision, the state of the users reality is checked. The importance of this is to allow for bidirectional portal travel. Furthermore, when a collision is invoked, the shaders are toggled from **Equal** to **Not Equal** and vic versa, hence rendering the appropriate content for the users line of sight. 
 
@@ -87,18 +87,18 @@ The script takes the assigned image, and creates a skybox material out of it. It
 ---
 
 ### Shaders:
-###### SkyboxCube/Skybox
+#### *SkyboxCube/Skybox*
 ---
-This shader contains a enumerate stencil that toggles between *‘Equal’* and *‘Not Equal’*. 
-*‘Equal’* denotes a state in which the user is within a Portal Reality, and the Portal Window should render the camera feed.
-*‘Not Equal’* denotes a state in which the user is outside a Portal, and the Portal Window should render the skybox scene.
+This shader contains a enumerate stencil that toggles between ***‘Equal’*** and ***‘Not Equal’***. 
+***‘Equal’*** denotes a state in which the user is within a Portal Reality, and the Portal Window should render the camera feed.
+***‘Not Equal’*** denotes a state in which the user is outside a Portal, and the Portal Window should render the skybox scene.
 
-##### In depth explanation given:
+###### In depth explanation given:
 https://www.youtube.com/watch?v=0eFo4ialKKQ&list=PLKIKuXdn4ZMhwJmPnYI0e7Ixv94ZFPvEP&index=6&t=342s
 
-***PortalWindow***
+#### *PortalWindow*
 ---
-This shader is responsible for rendering the Portal Transporter Plane. A stencil is used for choosing which objects are rendered in users line of sight. 
+This shader is responsible for rendering the **Portal Transporter** Plane. A stencil is used for choosing which objects are rendered in users line of sight. 
 
 ##### In depth explanation given:
 https://www.youtube.com/watch?v=b9xUO0zHNXw&list=PLKIKuXdn4ZMhwJmPnYI0e7Ixv94ZFPvEP&index=3&t=0s
