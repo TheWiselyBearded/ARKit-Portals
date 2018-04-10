@@ -1,12 +1,12 @@
 # ARKit Monoscopic Portals
 Using Unity 2017.3 and ARKit 1.0.14
 
-
+---
 
 ## Features:
 ![Features](https://i.imgur.com/FLGv2qX.gif)
 ![Features](https://i.imgur.com/Pk56HIX.gif)
-* Portals are bidirectional shaders.
+* Portals are **bidirectional shaders**.
 * By assigning a cubemap image to a Portal prefab, each portal will have its own unique skybox portal instance. 
 * Based on Camera gaze, the skybox is changed to provide respective portal experience.
 * Multiple AR Portals may be laid out in a scene and invoked based on user camera gaze.
@@ -15,7 +15,7 @@ Using Unity 2017.3 and ARKit 1.0.14
 
 ### References:
 * Summarized Portal Tutorial:
-https://www.youtube.com/watch?v=Z5AmqMuNi08&t=1552s
+[![FullPortalTutorial](https://img.youtube.com/vi/Z5AmqMuNi08&t=1552s/0.jpg)](https://www.youtube.com/watch?v=Z5AmqMuNi08&t=1552s)
 
 * All-in-one tutorial by Matthew Halberg explaining how to create a portal environment. For the sake of this framework, creating the portal prefab object has been based off this tutorial.
 
