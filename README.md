@@ -63,6 +63,7 @@ Once adding Portal prefab to scene, click on the **Portal Transporter** child ob
 This plane is responsible for detecting collisions with user camera, and assigning skybox Portal.
 You must specify the image to use from the 360 images folder, by default it’s using the Bladerunner 360 image.
 Simply drag/drop the image into the **Image Skybox** field for the **Portal Transporter** object.
+
 ---
 ---
 
