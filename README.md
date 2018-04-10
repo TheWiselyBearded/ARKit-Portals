@@ -1,30 +1,30 @@
-ARKit Monoscopic Portals
+# ARKit Monoscopic Portals
 Using Unity 2017.3 and ARKit 1.0.14
 
 
-Features:
-Portals are bidirectional shaders.
-By assigning a cubemap image to a Portal prefab, each portal will have its own unique skybox portal instance. 
-Based on Camera gaze, the skybox is changed to provide respective portal experience.
-Multiple AR Portals may be laid out in a scene and invoked based on user camera gaze.
-ARKit uses a focus square animation (provided in ARKit Unity API) to analyze plane. 
-When dashed lines are used, point clouds are being analyzed to create a plane. When plane is detected, the square follows the surface as an enclosed set of edges.
+## Features:
+* Portals are bidirectional shaders.
+* By assigning a cubemap image to a Portal prefab, each portal will have its own unique skybox portal instance. 
+* Based on Camera gaze, the skybox is changed to provide respective portal experience.
+* Multiple AR Portals may be laid out in a scene and invoked based on user camera gaze.
+* ARKit uses a focus square animation (provided in ARKit Unity API) to analyze plane. 
+* When dashed lines are used, point clouds are being analyzed to create a plane. When plane is detected, the square follows the surface as an enclosed set of edges.
 
-References:
-Summarized Portal Tutorial:
+###References:
+* Summarized Portal Tutorial:
 https://www.youtube.com/watch?v=Z5AmqMuNi08&t=1552s
 
-All-in-one tutorial by Matthew Halberg explaining how to create a portal environment. For the sake of this framework, creating the portal prefab object has been based off this tutorial.
+* All-in-one tutorial by Matthew Halberg explaining how to create a portal environment. For the sake of this framework, creating the portal prefab object has been based off this tutorial.
 
-Shader Tutorial and Bidirectional Portal Collision Detection:
+###Shader Tutorial and Bidirectional Portal Collision Detection:
 https://www.youtube.com/playlist?list=PLKIKuXdn4ZMhwJmPnYI0e7Ixv94ZFPvEP
 
-Tutorial series by Pirates Just AR. This tutorial series explains how to utilize custom shader scripts to mask off the real world and augmented portal world. The shaders are applied to the skybox, and the portal quad plane. The shader is explained in one of the scripts referenced below. Additionally, collision detection for creating bidirectional rendering of the portal is explained in this tutorial series.
+* Tutorial series by Pirates Just AR. This tutorial series explains how to utilize custom shader scripts to mask off the real world and augmented portal world. The shaders are applied to the skybox, and the portal quad plane. The shader is explained in one of the scripts referenced below. Additionally, collision detection for creating bidirectional rendering of the portal is explained in this tutorial series.
 
 
 
 
-Configuration:
+## Configuration:
 
 ****WHEN IMPORTING PACKAGE, MAKE SURE iOS BUILD PLATFORM IS SET.*****
 
@@ -90,5 +90,6 @@ This shader is responsible for rendering the Portal Transporter Plane. A stencil
 In depth explanation given:
 https://www.youtube.com/watch?v=b9xUO0zHNXw&list=PLKIKuXdn4ZMhwJmPnYI0e7Ixv94ZFPvEP&index=3&t=0s
 
+## License & Copyright
 
-
+Alireza Bahremand, Arizona State University
