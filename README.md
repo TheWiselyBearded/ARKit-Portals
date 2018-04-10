@@ -4,7 +4,8 @@ Using Unity 2017.3 and ARKit 1.0.14
 
 
 ## Features:
-![Features](http://i.imgur.com/UdJg4Tz.gif)
+![Features](https://i.imgur.com/vBg4qbP.gif)
+![Features](https://i.imgur.com/WWwhXBv.gif)
 * Portals are bidirectional shaders.
 * By assigning a cubemap image to a Portal prefab, each portal will have its own unique skybox portal instance. 
 * Based on Camera gaze, the skybox is changed to provide respective portal experience.
@@ -28,18 +29,18 @@ https://www.youtube.com/playlist?list=PLKIKuXdn4ZMhwJmPnYI0e7Ixv94ZFPvEP
 
 ## Configuration:
 
-****WHEN IMPORTING PACKAGE, MAKE SURE iOS BUILD PLATFORM IS SET.*****
+### ****WHEN IMPORTING PACKAGE, MAKE SURE iOS BUILD PLATFORM IS SET.*****
 
-Adding 360 Images to Project:
+## Adding 360 Images to Project:
 All custom files, scripts, media content, and scene files are stored in the Resources Folder. Images are stored in Resources/360Images/.
 
 When adding images to the project, simply drag/drop the file into the 360Images folder using File Explorer/Finder.
-MAKE SURE TO PROPERLY CONFIGURE IMAGE SETTINGS. 
+### MAKE SURE TO PROPERLY CONFIGURE IMAGE SETTINGS. 
 View the imported image in the editor inspector, and change the texture shape from 2D to cubemap.
+![2D_Cubemap](https://i.imgur.com/xuFw4YC.gif)
 
 
-
-Adding Portal Instances to AR Scene:
+## Adding Portal Instances to AR Scene:
 
 
 The PlaneTapScene is the horizontal-surface-instantiated AR scene. 
@@ -50,8 +51,8 @@ When app loads, the user must analyze surfaces for a horizontal plane AR instanc
 The user will tap to invoke the portals, this tap is what activates the AR scene; the portal objects. By default, the objects are disabled. This is to prevent them from randomly being instantiated in blank space as the user analyzes the environment for a flat surface.
 PlaneTapScene is responsible for creating a AR plane instance in the background via ARKit API. PlaneTapScene will allow PortalScene to instantiate the pertinent AR objects for the scene.
 
-Setting Up Portal Prefab:
-
+## Setting Up Portal Prefab:
+![SetUp_Portal](https://i.imgur.com/izaZfLQ.gifv)
 
 Once adding Portal prefab to scene, click on the Portal Transporter child object. 
 This plane is responsible for detecting collisions with user camera, and assigning skybox Portal.
@@ -60,9 +61,11 @@ Simply drag/drop the image into the Image Skybox field for the Portal Transporte
 
 
 
-
-How it works:
-Scripts:
+
+## How it works:
+
+### Scripts:
+
 IdentifyPortal.cs
 
 This script is assigned to the Main Camera object. It is responsible for identifying which portal the user is staring at. Should it be the case there are multiple portals in a scene, each one needs to properly assign the skybox rendering. There can only be one skybox in a scene, but it can be dynamically changed. Therefore, based on the portal the user is gazing at, the skybox is set to correspond to the portal being explored.
