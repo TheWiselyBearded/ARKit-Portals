@@ -4,9 +4,8 @@ Using Unity 2017.3 and ARKit 1.0.14
 
 
 ## Features:
-![Features](http://i.imgur.com/vBg4qbP.gif)
-![Features](http://i.imgur.com/WWwhXBv.gif)
-![Features](http://i.imgur.com/UdJg4Tz.gif)
+![Features](https://i.imgur.com/q17SLxQ.gif)
+![Features](https://i.imgur.com/yyUmexM.gif)
 * Portals are bidirectional shaders.
 * By assigning a cubemap image to a Portal prefab, each portal will have its own unique skybox portal instance. 
 * Based on Camera gaze, the skybox is changed to provide respective portal experience.
@@ -38,7 +37,7 @@ All custom files, scripts, media content, and scene files are stored in the Reso
 When adding images to the project, simply drag/drop the file into the 360Images folder using File Explorer/Finder.
 ### MAKE SURE TO PROPERLY CONFIGURE IMAGE SETTINGS. 
 View the imported image in the editor inspector, and change the texture shape from 2D to cubemap.
-![2D_Cubemap](https://i.imgur.com/xuFw4YC.gif)
+![2D_Cubemap](https://i.imgur.com/CJ3QkHQ.gif)
 
 
 ## Adding Portal Instances to AR Scene:
@@ -53,7 +52,7 @@ The user will tap to invoke the portals, this tap is what activates the AR scene
 PlaneTapScene is responsible for creating a AR plane instance in the background via ARKit API. PlaneTapScene will allow PortalScene to instantiate the pertinent AR objects for the scene.
 
 ## Setting Up Portal Prefab:
-![SetUp_Portal](https://i.imgur.com/izaZfLQ.gifv)
+![SetUp_Portal](https://i.imgur.com/t5xTexN.gif)
 
 Once adding Portal prefab to scene, click on the Portal Transporter child object. 
 This plane is responsible for detecting collisions with user camera, and assigning skybox Portal.
