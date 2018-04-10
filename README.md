@@ -42,7 +42,7 @@ View the imported image in the editor inspector, and change the texture shape fr
 
 
 ## Adding Portal Instances to AR Scene:
-
+![AddPortal](https://imgur.com/ZEzzep0.jpg)
 
 The PlaneTapScene is the horizontal-surface-instantiated AR scene. 
 The PortalScene object will contain all pertaining AR Portals. 
